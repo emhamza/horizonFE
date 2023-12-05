@@ -25,3 +25,11 @@ code {
     'Courier New',
     monospace;
 }
+
+/* tst style */
+
+  
+  .collapsed {
+    max-width: 80px;
+  }
+  
