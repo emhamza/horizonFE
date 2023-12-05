@@ -13,10 +13,15 @@ import { useState } from "react";
 function DesktopNav () {
     const [collapsed, setCollapsed] = useState(false);
 
-    const handleExpand = ()=>{
-        console.log('Expand button clicked!');
-        setCollapsed((prevCollapsed) => !prevCollapsed);
-    };
+    const handleExpand = () => {
+        setCollapsed((prevCollapsed) => {
+          console.log('Previous Collapsed State:', prevCollapsed);
+          const newCollapsed = !prevCollapsed;
+          console.log('New Collapsed State:', newCollapsed);
+          return newCollapsed;
+        });
+      };
+      
 
     // const expandButton = document.querySelector(".expandBtn");
     // expandButton.addEventListener("click", () => {
@@ -36,7 +41,7 @@ function DesktopNav () {
 
     return (
         <div>
-            <nav className={`${design.sidebar}`}>
+            <nav className={`${design.sidebar} ${collapsed ? 'collapsed' : ''}`}>
                 <div className={`${design.sidebarTopWrapper}`}>
                 <div className={`${design.sidebar-top}`}>
                     <a className={`${design.logo__wrapper}`}>
@@ -60,7 +65,7 @@ function DesktopNav () {
                             <a href="#" className={`${design.tooltip}`}>        
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-layout-dashboard" width="24"
                                     height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round"
-                                    strokeLinejoin="round" style={{ alignSelf: 'flex-centre' }}>
+                                    strokeLinejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M4 4h6v8h-6z" />
                                     <path d="M4 16h6v4h-6z" />
@@ -75,7 +80,7 @@ function DesktopNav () {
                             <a href="#commissiondBy" className={`${design.tooltip}`}>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-layout-dashboard" width="24"
                                     height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round"
-                                    strokeLinejoin="round" style={{ alignSelf: 'flex-centre' }}>
+                                    strokeLinejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M18 14a4 4 0 1 1 -3.995 4.2l-.005 -.2l.005 -.2a4 4 0 0 1 3.995 -3.8z" strokeWidth="0"
                                         fill="currentColor" />
