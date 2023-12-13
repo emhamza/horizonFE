@@ -2,7 +2,7 @@
   --primary-color: #191919;
   --white: #fff;
   --sidebar-primary: #473535;
-  --sidebar-primary-hover: #353e47;
+  --sidebar-primary-hover: #6ca5bd;
   --sidebar-background: #1f71ab;
   --background: #f1f3ff;
   --text-link: #fff;
@@ -44,15 +44,16 @@ body {
   transition: max-width 0.1s ease-in-out;
 }
 
-.collapsed .sidebar {
+.collapsed.sidebar {
   max-width: 80px;
   display: flex;
   align-items: center;
+  padding: 10px 0;
 }
 
 
 
-.collapsed .hide {
+.collapsed.hide {
   position: absolute;
   display: none;
 }
@@ -93,7 +94,7 @@ body {
   min-width: 28px;
 }
 
-.collapsed .search__wrapper svg {
+.collapsed.search__wrapper svg {
   top: 50%;
   left: 50%;
   right: auto;
@@ -106,11 +107,11 @@ body {
   white-space: nowrap;
 }
 
-.collapsed .search__wrapper input {
+.collapsed.search__wrapper input {
   max-width: 40px;
 }
 
-.collapsed .search__wrapper input::-webkit-input-placeholder {
+.collapsed.search__wrapper input::-webkit-input-placeholder {
   color: transparent;
 }
 
@@ -131,7 +132,7 @@ body {
   padding-bottom: 16px;
 }
 
-.collapsed .sidebar-top {
+.collapsed.sidebar-top {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -162,7 +163,7 @@ body {
   width: 100%;
 }
 
-.collapsed .sidebarLinks li {
+.collapsed.sidebarLinks li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,14 +173,19 @@ body {
   display: none;
 } */
 
-.sidebarLinks ul {
+.sidebarLinks ul a {
   list-style-type: none;
-  position: relative;
+  /* position: relative; */
   display: flex;
-  column-gap: 8px;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
+  column-gap: 16px;
+  padding: 4px 2px;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  align-items: center;
+}
+
+a:hover {
+  background-color: var(--sidebar-primary-hover);
 }
 
 .sidebarLinks h2 {
@@ -192,20 +198,20 @@ body {
   animation: fadeIn 0.2s ease-in-out;
 }
 
-.collapsed .sidebarLinks li a:hover {
+/* .collapsed.sidebarLinks a:hover {
   background-color: var(--sidebar-primary-hover);
-}
+} */
 
-.collapsed .sidebarLinks li a {
+.collapsed.sidebarLinks a {
   color: var(--text-link);
-  flex-grow: 1;
-  padding: 0 16px;
+  /* flex-grow: 1; */
+  padding: 6px 16px;
   font-size: 1.25rem;
-  display: flex;
+  /* display: flex; */
   gap: 28px;
   justify-content: center;
   align-items: center;
-  height: 56px;
+  /* height: 56px; */
   text-decoration: none;
   transition: background-color 0.2s ease-in-out;
 }
@@ -214,29 +220,29 @@ body {
   padding-bottom:5%;
 } */
 
-.collapsed .sidebarLinks li a .link {
+.collapsed.sidebarLinks a .link {
   flex-grow: 1;
   overflow: hidden;
   white-space: nowrap;
   animation: fadeIn 0.2s ease-in-out;
 }
 
-.collapsed .sidebarLinks li a img {
+.collapsed.sidebarLinks a img {
   height: 34px;
   width: 34px;
 }
 
-.collapsed .sidebarLinks .active:hover {
+.collapsed.sidebarLinks .active:hover {
   background-color: var(--sidebar-primary-hover);
 }
 
-.collapsed .sidebarLinks .active {
+.collapsed.sidebarLinks .active {
   text-decoration: none;
   background-color: var(--sidebar-primary-hover);
   color: var(--text-link);
 }
 
-.collapsed .sidebarLinks .active svg {
+.collapsed.sidebarLinks .active svg {
   stroke: var(--text-link);
 }
 
@@ -269,11 +275,11 @@ body {
   left: 90px;
 }
 
-.collapsed .tooltip:hover .tooltipContent {
+.collapsed.tooltip:hover .tooltipContent {
   visibility: visible;
 }
 
-/* ? profile part */
+/* ? profile part =======.====.====.====.====.====.====.====.====.====.===.=/,=..=l.=./[l */
 .sidebar__profile {
   margin-top: 16px;
   display: flex;
@@ -308,7 +314,7 @@ body {
   animation: fadeIn 0.2s ease-in-out;
 }
 
-.user-name {
+.userName {
   font-weight: 600;
   text-align: left;
   color: var(--text-link);
@@ -324,13 +330,14 @@ body {
 .logout {
   animation: fadeIn 0.2s ease-in-out;
   margin-left: auto;
+  margin-top: -20px;
 }
 
 .logout svg {
   color: var(--logout);
 }
 
-.collapsed .logout {
+.collapsed.logout {
   display: none;
 }
 
@@ -356,7 +363,7 @@ body {
   height: 20px;
 }
 
-.collapsed .expandBtn svg {
+.collapsed.expandBtn svg {
   transform: rotate(-360deg);
 }
 
