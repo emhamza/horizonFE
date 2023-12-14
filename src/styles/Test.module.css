@@ -14,7 +14,9 @@
 body {
   font-family: 'Work Sans', sans-serif;
   font-size: 16px;
+
   /* padding: 16px; */
+
   /* height: 100vh; */
 }
 
@@ -35,6 +37,7 @@ body {
   min-height: 860px;
   height: 100%;
   padding: 1%;
+
   /* border-radius: 10px; */
   max-width: 15rem;
   display: flex;
@@ -50,8 +53,6 @@ body {
   align-items: center;
   padding: 10px 0;
 }
-
-
 
 .collapsed.hide {
   position: absolute;
@@ -175,11 +176,14 @@ body {
 
 .sidebarLinks ul a {
   list-style-type: none;
+
   /* position: relative; */
   display: flex;
   column-gap: 16px;
   padding: 4px 2px;
+
   /* flex-direction: column; */
+
   /* justify-content: center; */
   align-items: center;
 }
@@ -204,13 +208,16 @@ a:hover {
 
 .collapsed.sidebarLinks a {
   color: var(--text-link);
+
   /* flex-grow: 1; */
   padding: 6px 16px;
   font-size: 1.25rem;
+
   /* display: flex; */
   gap: 28px;
   justify-content: center;
   align-items: center;
+
   /* height: 56px; */
   text-decoration: none;
   transition: background-color 0.2s ease-in-out;
@@ -367,8 +374,8 @@ a:hover {
   transform: rotate(-360deg);
 }
 
-.bottom-links {
-  margin-top: auto;
+.bottomLinks {
+  margin-top: 15rem;
 }
 
 @keyframes fadeIn {
