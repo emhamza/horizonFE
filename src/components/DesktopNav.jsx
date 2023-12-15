@@ -155,7 +155,7 @@ function DesktopNav () {
                     </ul>
                     <div className={`${design.sidebarLinks} ${design.bottomLinks}`}>
                         <ul>
-                            <a href="#">        
+                            <a href="#">            
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-layout-dashboard" width="24"
                                     height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round"
                                     strokeLinejoin="round">
@@ -165,7 +165,7 @@ function DesktopNav () {
                                     <path d="M14 12h6v8h-6z" />
                                     <path d="M14 4h6v4h-6z" />
                                 </svg>
-                                <NavLink className= {`${design.link} ${design.hide} ${collapsed ? design.collapsed : ''}`}  to="/" end> Dashboard</NavLink>
+                                <NavLink className= {`${design.link} ${design.hide} ${collapsed ? design.collapsed : ''}`}  to="/" end> Setting</NavLink>
                                 {/* <NavLink className={`${design.tooltipContent}`}  to="/" end> Dashboard</NavLink> */}
                             </a>
                         </ul>
