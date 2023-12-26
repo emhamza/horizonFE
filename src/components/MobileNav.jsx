@@ -29,12 +29,6 @@ function DesktopNav () {
     //     document.body.classList.toggle("collapsed");
     // });
 
-
-    // const navLinkStyle = ({ isActive}) => ({
-    //     backgroundColor: isActive ? '#90bf0d' : '#fff',
-    //     color: isActive ? '#fff' : 'inherit',
-    // });
-
     const handleLogout = () => {
         localStorage.clear();
         window.location.pathname = '/login';
