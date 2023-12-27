@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+import styles from '../styles/Form.module.css';
+
 function Login() {
     const [payload, setPayload] = useState({
         username: '',
@@ -41,8 +43,8 @@ function Login() {
     };
 
     return (
-        <div>
-            <p>{errorMessage}</p>
+        <div className={`${styles.formContainer}`}>
+            <p className={`${styles.errMsg}`}>{errorMessage}</p>
             <form onSubmit={proceedLogin}>
                 <input
                     name="username"
