@@ -24,6 +24,7 @@ form {
 
 .formContainer input {
     height: 50px;
+    margin-bottom: 10px;
 }
 
 input[type="text"],
@@ -38,8 +39,9 @@ input[type="textarea"]:focus,
 input[type="number"]:focus {
   background: transparent;
   outline: none;
-  border-radius: 25px;
+  border-radius: 5px;
   border: 1px solid #fff;
+  padding: 2%;
 }
 
 .formContainer input::placeholder {
